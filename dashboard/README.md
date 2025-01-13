@@ -1,50 +1,89 @@
-# React + TypeScript + Vite
+# Electric Vehicle Analytics Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive analytics dashboard built with React, displaying electric vehicle population data with interactive visualizations and detailed analysis.
 
-Currently, two official plugins are available:
+## Live Demo
+https://mapupdashboard.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Interactive Data Visualization**
+  - Bar chart showing vehicle distribution by make
+  - Comprehensive data table with sorting and filtering
+  - Real-time search functionality
+  - Data export capabilities
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Key Statistics**
+  - Total vehicles tracked
+  - Unique manufacturers
+  - Model diversity analysis
+  - Comprehensive data points
 
-- Configure the top-level `parserOptions` property like this:
+- **Advanced Table Functionality**
+  - Multi-column sorting
+  - Global search
+  - Pagination
+  - CSV export
+  - Custom filtering
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Technology Stack
+
+- React
+- TypeScript
+- Recharts for data visualization
+- Ant Design for UI components
+- Tailwind CSS for styling
+- Papa Parse for CSV processing
+
+## Local Development
+
+1. Clone the repository:
+```bash
+git clone [your-repo-url]
+```
+2. Change the directory:
+```bash
+cd dashboard
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+3. Install dependencies:
+```bash
+npm install
 ```
+
+4. Start the development server:
+```bash
+npm run dev
+```
+
+5. Build for production:
+```bash
+npm run build
+```
+
+## Deployment
+
+The dashboard is deployed on mapupdashboard  and can be accessed at https://mapupdashboard.netlify.app/.
+
+## Assessment Information
+
+This project was completed as part of the MapUp frontend developer assessment. The repository has been shared with the following evaluators:
+- vedantp@mapup.ai
+- ajayap@mapupa.ai
+- divyanshs@mapup.ai
+
+## Data Source
+
+The dashboard uses the provided EV population dataset, processing and visualizing the following key metrics:
+- Vehicle make and model distribution
+- Population trends
+- Detailed vehicle specifications
+
+## Additional Notes
+
+- The dashboard is fully responsive and works across all device sizes
+- Data is loaded and processed efficiently to ensure optimal performance
+- Error handling and loading states are implemented for better user experience
+
+---
+Created by Kushal for MapUp Frontend Assessment 2025
